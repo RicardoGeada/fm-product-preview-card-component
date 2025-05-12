@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/RicardoGeada/fm-product-preview-card-component](https://github.com/RicardoGeada/fm-product-preview-card-component)
-- Live Site URL: [https://ricardogeada.github.io/fm-product-preview-card-component/](https://ricardogeada.github.io/fm-product-preview-card-component/)
+- Solution URL: [github.com/RicardoGeada/fm-product-preview-card-component/](https://github.com/RicardoGeada/fm-product-preview-card-component)
+- Live Site URL: [ricardogeada.github.io/fm-product-preview-card-component/](https://ricardogeada.github.io/fm-product-preview-card-component/)
 
 ## My process
 
