@@ -6,7 +6,7 @@
   --color-grey: #6c7289;
   --color-cream: #f2eae2;
   --color-white: #ffffff;
-  --color-green-500: #3D8168;
+  --color-green-500: #3d8168;
   --color-green-700: #1a4032;
 
   // === spaces ===
@@ -29,6 +29,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: var(--space-200);
 }
 
 main {
@@ -107,8 +108,8 @@ main {
 
     &:hover,
     &:focus {
-        background-color: var(--color-green-700);
-        cursor: pointer;
+      background-color: var(--color-green-700);
+      cursor: pointer;
     }
   }
 }
@@ -116,8 +117,25 @@ main {
 .attribution {
   font-size: 11px;
   text-align: center;
-
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    &__preview-card {
+      display: flex;
+      max-width: 600px;
+      height: 456px;
+    }
+
+    &__image {
+      height: 100%;
+    }
+
+    &__info {
+      flex-basis: 50%;
+    }
   }
 }

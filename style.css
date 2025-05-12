@@ -27,7 +27,7 @@
   --color-grey: #6c7289;
   --color-cream: #f2eae2;
   --color-white: #ffffff;
-  --color-green-500: #3D8168;
+  --color-green-500: #3d8168;
   --color-green-700: #1a4032;
   --space-500: 40px;
   --space-400: 32px;
@@ -48,6 +48,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: var(--space-200);
 }
 
 main {
@@ -149,6 +150,20 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .product__preview-card {
+    display: flex;
+    max-width: 600px;
+    height: 456px;
+  }
+  .product__image {
+    height: 100%;
+  }
+  .product__info {
+    flex-basis: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
