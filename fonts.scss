@@ -1,0 +1,79 @@
+@use "sass:map";
+
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/fraunces-v35-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v29-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v29-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+$text-presets: (
+  "1": (
+    size: 32px,
+    weight: 700,
+    line-height: 1,
+    letter-spacing: 0,
+    font-family: ("Fraunces"),
+  ),
+  "2": (
+    size: 14px,
+    weight: 700,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-family: ("Montserrat"),
+  ),
+  "3": (
+    size: 14px,
+    weight: 500,
+    line-height: 1.6,
+    letter-spacing: 0,
+    font-family: ("Montserrat"),
+  ),
+  "4": (
+    size: 12px,
+    weight: 500,
+    line-height: 1.2,
+    letter-spacing: 5px,
+    font-family: ("Montserrat"),
+  ),
+  "5": (
+    size: 13px,
+    weight: 500,
+    line-height: 1.2,
+    letter-spacing: 0,
+    font-family: ("Montserrat"),
+    text-decoration: line-through,
+  ),
+);
+
+
+@mixin apply-text-preset($name) {
+    $preset: map.get($text-presets, $name);
+    @if $preset {
+        font-size: map.get($preset, size);
+        font-weight: map.get($preset, weight);
+        line-height: map.get($preset, line-height);
+        letter-spacing: map.get($preset, letter-spacing);
+        font-family: map.get($preset, font-family);
+        text-decoration: map.get($preset, text-decoration);
+    } 
+};

@@ -1,3 +1,118 @@
+@use "./fonts.scss";
+
+:root {
+  // === colors ===
+  --color-black: #1c232b;
+  --color-grey: #6c7289;
+  --color-cream: #f2eae2;
+  --color-white: #ffffff;
+  --color-green-500: #3D8168;
+  --color-green-700: #1a4032;
+
+  // === spaces ===
+  --space-500: 40px;
+  --space-400: 32px;
+  --space-300: 24px;
+  --space-200: 16px;
+  --space-100: 8px;
+  --space-50: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// === product-preview-card ===
+.product {
+  &__preview-card {
+    border-radius: var(--space-100);
+    background-color: var(--color-white);
+    max-width: 350px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__info {
+    padding: var(--space-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-300);
+  }
+
+  &__category {
+    @include fonts.apply-text-preset("4");
+    text-transform: uppercase;
+    color: var(--color-grey);
+  }
+
+  &__name {
+    @include fonts.apply-text-preset("1");
+  }
+
+  &__description {
+    @include fonts.apply-text-preset("3");
+    color: var(--color-grey);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-200);
+
+    &--now {
+      @include fonts.apply-text-preset("1");
+      color: var(--color-green-500);
+    }
+
+    &--then {
+      @include fonts.apply-text-preset("5");
+      color: var(--color-grey);
+    }
+  }
+
+  &__add-to-cart-btn {
+    @include fonts.apply-text-preset("2");
+    color: var(--color-white);
+    border-radius: var(--space-100);
+    background-color: var(--color-green-500);
+    padding: var(--space-200) var(--space-400);
+    outline: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-100);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-green-700);
+        cursor: pointer;
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

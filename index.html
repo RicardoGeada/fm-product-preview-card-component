@@ -16,10 +16,10 @@
     <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
-    
+
     <main>
-      <article class="product-preview-card">
-        <picture class="product__image">
+      <article class="product__preview-card">
+        <picture >
           <source
             media="(max-width: 767px)"
             srcset="./images/image-product-mobile.jpg"
@@ -31,6 +31,7 @@
           <img
             src="./images/image-product-mobile.jpg"
             alt="abrielle Essence Eau De Parfum bottle"
+            class="product__image"
           />
         </picture>
         <div class="product__info">
@@ -44,7 +45,7 @@
             <span class="product__price--now">$149.99</span>
             <span class="product__price--then">$169.99</span>
           </p>
-          <button>
+          <button class="product__add-to-cart-btn">
             <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />
             <span>Add to Cart</span>
           </button>
