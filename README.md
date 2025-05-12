@@ -42,7 +42,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to use the <picture> element to serve different images depending on the screen size. This allows better optimization and responsiveness by loading smaller images on mobile devices and larger ones on desktop.
+I learned how to use the `<picture>` element to serve different images depending on the screen size. This allows better optimization and responsiveness by loading smaller images on mobile devices and larger ones on desktop.
 
 ```html
 <picture>
